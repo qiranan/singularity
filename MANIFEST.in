@@ -1,0 +1,9 @@
+include .gitignore
+include QUICKSTART.md
+recursive-include scripts *.py
+recursive-include tests *.py
+global-exclude *.py[cod]
+prune .review-backup
+prune .venv
+prune build
+prune dist

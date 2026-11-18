@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "singularity"
+dynamic = ["version"]
+description = "从 0 掌控整台 Linux 服务器：账号权限 / 网络端口 / 进程服务 / 软件环境 / 日志"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.scripts]
+singularity = "singularity.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["singularity*"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "singularity.__version__"}
