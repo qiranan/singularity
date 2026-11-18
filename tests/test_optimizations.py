@@ -1,4 +1,4 @@
-"""升级范围、并发克隆、日志窗口、审计和概览缓存的行为测试。"""
+"""升级范围、并发克隆、日志窗口、审计轮转和概览并行的行为测试。"""
 import contextlib
 import datetime as dt
 import io
